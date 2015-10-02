@@ -11,6 +11,8 @@
 	<template>
 		<h1>Hello World</h1>
 		<p>{{fullName}}</p> <!-- <p><span>{{firstName}}</span> <span>{{lastName}}</span></p> -->
+
+		<input type="text" value="{{lastName::input}}">
 	</template>
 
 </dom-module>
@@ -19,7 +21,7 @@
 	Polymer({
 		is:"hello-world",
 
-		properties: {
+		properties: {  // make the element dynamic and flexible
 			firstName: String, //must be camelcase and the corresponding tag attr must be hyphenated
 			lastName: {
 				type: String,
