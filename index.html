@@ -14,14 +14,25 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="bower_components/webcomponentsjs/webcomponents.js"></script> <!-- makes polymer work -->
-        <link rel='import' href="bower_components/google-map/google-map.html">
-        <link rel='import' href="hello-world.html">
+        <!-- <link rel='import' href="bower_components/google-map/google-map.html"> -->
+        <!-- <link rel='import' href="hello-world.html"> -->
+        <link rel='import' href="contact-list.html">
     </head>
     <body>
-      <hello-world first-name="Adrian"></hello-world> <!-- *** uncomment main.css line 287 to see styling changes -->
 
-      <google-map latitude="39.9147120" longitude="-105.1077270"><!-- webcomponents can use attributes instead of having embed code -->  <!-- matches to the 'bower_components/google-map/google-map.html' line 156, as a property of the google-map Polymer -->
+<!-- Hello World *** uncomment below, line 18 and main.css line 287 to see styling changes - basic example of two way binding and styling -->
+
+      <!-- <hello-world first-name="Adrian"></hello-world>  -->
+
+<!-- Google Maps *** uncomment below / line 17 - webcomponents can use attributes instead of having embed code -->  <!-- matches to the 'bower_components/google-map/google-map.html' line 156, as a property of the google-map Polymer -->
+
+      <!-- <google-map latitude="39.9147120" longitude="-105.1077270">
         <google-map-marker latitude="39.9147120" longitude="-105.1077270"><google-map-marker>
-      </google-map> 
+      </google-map>  -->
+
+
+<!-- Contact List -->
+      <contact-list></contact-list>
+
     </body>
 </html>
