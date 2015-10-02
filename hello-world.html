@@ -10,12 +10,30 @@
 
 	<template>
 		<h1>Hello World</h1>
+		<p>{{fullName}}</p> <!-- <p><span>{{firstName}}</span> <span>{{lastName}}</span></p> -->
 	</template>
 
 </dom-module>
 
 <script>
 	Polymer({
-		is:"hello-world"
+		is:"hello-world",
+
+		properties: {
+			firstName: String, //must be camelcase and the corresponding tag attr must be hyphenated
+			lastName: {
+				type: String,
+				value: 'T'
+			},
+			fullName: {
+				type: String,
+				computed: 'computeFullName(firstName, lastName)'
+			}
+		},
+
+		computeFullName: function(firstName, lastName){
+			return firstName + " " + lastName; 
+		}
+
 	});
 </script>
