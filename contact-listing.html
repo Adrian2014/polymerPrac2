@@ -1,0 +1,49 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<!-- this will allow for modular displays.  You can use this template for a single person's information, keeping the style and HTML mark-up-->
+
+<dom-module id="contact-listing">
+
+	<style>
+		.listing-wrapper {
+	  	display: flex;
+	  	margin-bottom: 5px;
+	  	padding-top: 10px;
+	  }
+	  .listing-wrapper img{
+	  	height: 100px;
+	  	width:50px;
+	  	border-radius: 50%;
+	  	border:solid black 1px;
+	  	margin-right: 10px;
+	  }
+	  .listing-wrapper span{
+	  	line-height: 120px;
+	  }
+	  h3 {
+	  	margin-right: 10px;
+	  	line-height: 80px;
+	  }
+		  
+	</style>
+
+	<template>
+		<div class="listing-wrapper">
+			<img src="{{img}}" alt="">
+			<h3>{{name}}</h3>
+			<span>{{email}}</span>
+		</div>
+	</template>
+
+</dom-module>
+
+<script>
+	Polymer({
+		is:"contact-listing",
+		properties: {
+			name: String,
+			email: String,
+			img: String
+		}
+	});
+</script>

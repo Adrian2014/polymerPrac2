@@ -1,44 +1,22 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="contact-listing.html">
 
 <dom-module id="contact-list">
 
 	<style>
-	  
 	  ul{
 	  	list-style: none;
-	  }
-	  li{
-	  	display: flex;
-	  	margin-bottom: 5px;
-	  	padding-top: 10px;
-	  }
+	  }	
 	  li + li {
 	  	border-top: solid 1px black;
-	  }
-	  li img{
-	  	height: 100px;
-	  	width:50px;
-	  	border-radius: 50%;
-	  	border:solid black 1px;
-	  	margin-right: 10px;
-	  }
-	  li span{
-	  	line-height: 120px;
-	  }
-	  h3 {
-	  	margin-right: 10px;
-	  	line-height: 80px;
-	  }
-		
+	  }	
 	</style>
 
 	<template>
 		<ul>
 			<template is="dom-repeat" items="{{contacts}}"> <!-- references the this.contacts in the contact-list Polymer ** dom-repeat iterates over the object in attr items-->
 				<li>
-					<img src="{{item.image}}" alt="">
-					<h3>{{item.name}}</h3>
-					<span>{{item.email}}</span>
+					<contact-listing name="{{item.name}}" img="{{item.image}}" email="{{item.email}}"></contact-listing>
 				</li>
 			</template>
 		</ul>
